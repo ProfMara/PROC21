@@ -5,24 +5,10 @@ const Body = Matter.Body;
 var engine;
 var world;
 
-var solo;
-var paredeEsquerda;
-var paredeDireita;
-var teto;
-var bola;
-
-var btn1;
-var btn2;
-
 function setup() {
     createCanvas(400, 400);
     engine = Engine.create();
     world = engine.world;
-
-    solo = new Parede(200, 390, 400, 20);
-    teto = new Parede(200, 10, 400, 20);
-    paredeEsquerda = new Parede(0, 200, 20, 400);
-    paredeDireita = new Parede(390, 200, 20, 400);
 
 
     ellipseMode(RADIUS);
@@ -32,12 +18,6 @@ function setup() {
 
 function draw() {
     background(51);
-
-    solo.show();
-    teto.show();
-    paredeDireita.show();
-    paredeEsquerda.show();
-
 
     Engine.update(engine);
 }
